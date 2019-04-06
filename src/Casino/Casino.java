@@ -102,7 +102,6 @@ public class Casino implements Compare {
                 arrayPosition = i;
                 if (arrayPosition == -1) {
                     System.out.println("Player not in Casino");
-                    System.exit(0);
                 }
                 break;
             }
@@ -119,7 +118,7 @@ public class Casino implements Compare {
             for (int i = arrayPosition; i < this.currentPlayers - 1; i++) {
                 this.playerArray[i] = this.playerArray[i + 1];
             }
-            this.playerArray[currentPlayers] = null;
+            this.playerArray[currentPlayers-1] = null;
             this.currentPlayers--;
         }
         return true;

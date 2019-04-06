@@ -57,15 +57,11 @@ public class TestCasinos {
         casinoDeMontreal.printArray();
         System.out.println("\n");
 
-        //Betting   
+        //Quit casino test
+        System.out.println("Should say player is not in casino: ");
+        tooPoorToPlay.quitCasino(casinoDeGatineau);
+        System.out.println("Should remove player, returns true: ");
+        System.out.println(phil.quitCasino(casinoDeMontreal));
         
-        pat.diceGame(5);
-        fredou.headsOrTails(5);
-        
-       //Betting more than they have
-        System.out.println("pat");
-        pat.diceGame(1000);
-        System.out.println("fredou");
-        fredou.headsOrTails(3500);
     }
 }

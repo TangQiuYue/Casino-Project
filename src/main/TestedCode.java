@@ -169,6 +169,23 @@ public class TestedCode {
         josh.headsOrTails(5);
         System.out.println("\n");
         
+       //Betting   
+        
+        pat.diceGame(5);
+        fredou.headsOrTails(5);
+        
+       //Betting more than they have
+        System.out.println("pat");
+        pat.diceGame(1000);
+        System.out.println("fredou");
+        fredou.headsOrTails(3500);
+        
+        //Quit casino test
+        System.out.println("Should say player is not in casino: ");
+        tooPoorToPlay.quitCasino(casinoDeGatineau);
+        System.out.println("Should remove player, returns true: ");
+        System.out.println(phil.quitCasino(casinoDeMontreal));
+        
         */
         
 

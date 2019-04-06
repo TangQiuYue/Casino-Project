@@ -67,9 +67,13 @@ public class Player implements Compare {
         }
     }
 
-    void quitCasino(Casino leaveCasino) {
-        leaveCasino.removePlayer(this);
+    public boolean quitCasino(Casino leaveCasino) {
+        if(leaveCasino.removePlayer(this) == true){
         this.casino = null;
+        return true;
+    } else {
+            return false;
+        }
     }
 
     public int headsOrTails(int bid) {
