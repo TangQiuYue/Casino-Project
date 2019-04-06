@@ -41,26 +41,29 @@ public class Player implements Compare {
     @Override
     public String toString() {
         if (this.casino == null) {
-            return ("I am " + this.name + ", I have " +  this.funds + " coins and I'm not in a Casino");
+            return ("I am " + this.name + ", I have " + this.funds + " coins and I'm not in a Casino");
         } else {
-           // return ("I am " +this.name + ", I have " +  this.funds + " coins and I'm in " + casino.getName());
-           return (this.name);
+            return ("I am " + this.name + ", I have " + this.funds + " coins and I'm in " + casino.getName());
         }
-    } 
+    }
 
     public boolean equals(Player others) {
         return this.name.equals(others.name);
     }
 
     public boolean joinCasino(Casino casinoJoin) {
-        //return 1 is en error, return 0 is successful
+
         if (this.funds == 0) {
             System.out.println("You need money to join");
             return false;
         } else {
-            if (casinoJoin.addPlayer(this) == true);
-            this.casino = casinoJoin;
-            return true;
+            if (casinoJoin.addPlayer(this) == false) {
+                return false;
+            } else {
+                if (casinoJoin.addPlayer(this) == true);
+                this.casino = casinoJoin;
+                return true;
+            }
         }
     }
 
@@ -87,10 +90,11 @@ public class Player implements Compare {
         }
         return funds;
     }
-    
-        public int diceGame(int bid) {
-        if(this.casino instanceof MainCasino)
-        casino.findPlayer(this);
+
+    public int diceGame(int bid) {
+        if (this.casino instanceof MainCasino) {
+            casino.findPlayer(this);
+        }
         boolean enoughMoney = false;
         while (enoughMoney == false) {
             if (bid > this.funds) {

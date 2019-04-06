@@ -42,7 +42,7 @@ public class SecondaryCasino extends Casino {
         Player leftMerge[] = new Player[size1];
         Player rightMerge[] = new Player[size2];
         System.out.println("Start \n");
-        printArray(arrayOfPlayers);
+        printArray();
         for (int i = 0; i < size1; ++i) {
             leftMerge[i] = arrayOfPlayers[minSizeArray + i];
         }
@@ -77,7 +77,7 @@ public class SecondaryCasino extends Casino {
             k++;
         }
         System.out.println("End \n");
-        printArray(arrayOfPlayers);
+        printArray();
     }
 
     void sortBeforeMerge(Player[] arrayOfPlayers, int minSizeArray, int maxSizeArray) {
@@ -95,13 +95,13 @@ public class SecondaryCasino extends Casino {
     public void sortAndBoot(Player[] arrayOfPlayers, int minSizeArray, int maxSizeArray, int bootHowMany) {
         sortBeforeMerge(arrayOfPlayers, minSizeArray, maxSizeArray);
         System.out.println("your sorted player array \n");
-        printArray(arrayOfPlayers);
+        printArray();
         int temp = this.getCurrentPlayers() - 1;
         for (int i = temp; i > temp - bootHowMany; i--) {
             this.removePlayer(arrayOfPlayers[i]);
         }
         System.out.println("your new player array \n");
-        printArray(arrayOfPlayers);
+        printArray();
 
     }
 

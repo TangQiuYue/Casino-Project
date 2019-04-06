@@ -19,8 +19,8 @@ public class TestCasinos {
        
         //Creation of Casinos
         
-        MainCasino casinoDeMontreal = new MainCasino();
-        SecondaryCasino casinoDeGatineau = new SecondaryCasino();
+        MainCasino casinoDeMontreal = new MainCasino("Casino de Montreal", 10);
+        SecondaryCasino casinoDeGatineau = new SecondaryCasino("Casino de Gatineau", 10);
         
         
         //Creation of rich players
@@ -31,13 +31,37 @@ public class TestCasinos {
         RichPlayer nicola = new RichPlayer("Nicola", 1500);
         RichPlayer tooPoorTest = new RichPlayer("poorTest", 10);
         
-        casinoDeMontreal.addPlayer(audrey);
-        casinoDeMontreal.addPlayer(marie);
-        casinoDeMontreal.addPlayer(fredou);
-        casinoDeMontreal.addPlayer(nicola);
-        casinoDeMontreal.addPlayer(tooPoorTest);
+        //toString Before entering the casino
+        System.out.println("toString Before entering the casino");
+        System.out.println(audrey.toString());
+        System.out.println(marie.toString());
+        System.out.println(fredou.toString());
+        System.out.println(nicola.toString());
+        System.out.println(tooPoorTest.toString());
+        System.out.println("");
         
-        casinoDeMontreal.printArray(casinoDeMontreal.getPlayerArray());
-        casinoDeGatineau.printArray(casinoDeGatineau.getPlayerArray());
+        //Players are joining the Casino
+        
+        System.out.println(audrey.joinCasino(casinoDeMontreal));
+        System.out.println(marie.joinCasino(casinoDeMontreal));
+        System.out.println(fredou.joinCasino(casinoDeMontreal));
+        System.out.println(nicola.joinCasino(casinoDeMontreal));
+        System.out.println(tooPoorTest.joinCasino(casinoDeMontreal));
+        System.out.println("\n");
+        
+        //Array from players who have joined the Casino
+        System.out.println("Array of players having entered the Casino");
+        casinoDeMontreal.printArray();
+        System.out.println("\n");
+        
+        //toString After entering the Casino
+        System.out.println("To String after entering Casino");
+        System.out.println(audrey.toString());
+        System.out.println(marie.toString());
+        System.out.println(fredou.toString());
+        System.out.println(nicola.toString());
+        System.out.println(tooPoorTest.toString());
+        System.out.println("");
+        
     }
 }

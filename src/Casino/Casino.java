@@ -54,7 +54,6 @@ public class Casino implements Compare {
 
     //Methodes
     public boolean addPlayer(Player newPlayer) {
-        //return 1 is en error, return 0 is successful
         if (this.currentPlayers > this.maxPlayers) {
             return false;
         }
@@ -98,7 +97,7 @@ public class Casino implements Compare {
 
     public int findPlayer(Player playerSearch) {
         int arrayPosition = -1;
-        for (int i = 0; i < this.currentPlayers ; i++) {
+        for (int i = 0; i < this.currentPlayers; i++) {
             if (playerSearch.equals(playerArray[i])) {
                 arrayPosition = i;
                 if (arrayPosition == -1) {
@@ -171,15 +170,17 @@ public class Casino implements Compare {
         }
     }
 
-    public void printArray(Player[] array) {
-        int n = array.length;
-        for (int i = 0; i < n; ++i) {
-            System.out.print(array[i] + " ");
+    public String printArray() {
+        String temp[] = new String[this.currentPlayers];
+        for (int i = 0; i < this.currentPlayers; i++) {
+            temp[i] = playerArray[i].getName();
         }
-        System.out.println();
-    }
-    // Setters and getters
+        System.out.print(Arrays.asList(temp));
+        return "End of Array";
 
+    }
+
+// Setters and getters
     public void setName(String name) {
         this.name = name;
     }
