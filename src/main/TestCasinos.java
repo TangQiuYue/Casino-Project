@@ -57,25 +57,15 @@ public class TestCasinos {
         casinoDeMontreal.printArray();
         System.out.println("\n");
 
-        // Play Dice and HeadsOrTails game before Gregory Charles show
-        audrey.diceGame(20);
-        josh.headsOrTails(5);
-        System.out.println("\n");
-
-        //Add Gregory Show
-        casinoDeMontreal.gregoryStartShow();
-
-        // Play Dice and HeadsOrTails game during Gregory Charles show
-        audrey.diceGame(20);
-        josh.headsOrTails(5);
-        System.out.println("\n");
+        //Betting   
         
-        //End the Gregory Charle Show
-        casinoDeMontreal.gregoryEndShow();
-
-        // Play Dice and HeadsOrTails game after Gregory Charles show
-        audrey.diceGame(20);
-        josh.headsOrTails(5);
-        System.out.println("\n");
+        pat.diceGame(5);
+        fredou.headsOrTails(5);
+        
+       //Betting more than they have
+        System.out.println("pat");
+        pat.diceGame(1000);
+        System.out.println("fredou");
+        fredou.headsOrTails(3500);
     }
 }

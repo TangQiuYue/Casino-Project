@@ -148,6 +148,27 @@ public class TestedCode {
         System.out.println(oneTooMany.toString());
         System.out.println("");
         
+        // Play Dice and HeadsOrTails game before Gregory Charles show
+        audrey.diceGame(20);
+        josh.headsOrTails(5);
+        System.out.println("\n");
+
+        //Add Gregory Show
+        casinoDeMontreal.gregoryStartShow();
+
+        // Play Dice and HeadsOrTails game during Gregory Charles show
+        audrey.diceGame(20);
+        josh.headsOrTails(5);
+        System.out.println("\n");
+        
+        //End the Gregory Charle Show
+        casinoDeMontreal.gregoryEndShow();
+
+        // Play Dice and HeadsOrTails game after Gregory Charles show
+        audrey.diceGame(20);
+        josh.headsOrTails(5);
+        System.out.println("\n");
+        
         */
         
 

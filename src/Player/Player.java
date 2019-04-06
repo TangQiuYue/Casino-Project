@@ -74,42 +74,31 @@ public class Player implements Compare {
 
     public int headsOrTails(int bid) {
         casino.findPlayer(this);
-        boolean enoughMoney = false;
-        while (enoughMoney == false) {
-            if (bid > this.funds) {
-                enoughMoney = false;
-                System.out.println("You cannot bid more than what you have");
-                System.exit(0);
-            } else {
-                enoughMoney = true;
-            }
+        if (bid < this.funds) {
             this.funds = this.funds - bid;
             System.out.println("funds after bid are " + this.funds);
 
             this.funds = this.funds + casino.playheadsOrTailsGame(this, bid);
+            return funds;
+        } else {
+            System.out.println("You cannot bid more than what you have");
+            return funds;
         }
-        return funds;
     }
 
     public int diceGame(int bid) {
         if (this.casino instanceof MainCasino) {
             casino.findPlayer(this);
         }
-        boolean enoughMoney = false;
-        while (enoughMoney == false) {
-            if (bid > this.funds) {
-                enoughMoney = false;
-                System.out.println("You cannot bid more than what you have");
-                System.exit(0);
-            } else {
-                enoughMoney = true;
-            }
+        if (bid < this.funds) {
             this.funds = this.funds - bid;
             System.out.println("funds after bid are " + this.funds);
-
             this.funds = this.funds + casino.playDiceGame(this, bid);
+            return funds;
+        } else {
+            System.out.println("You cannot bid more than what you have");
+            return funds;
         }
-        return funds;
     }
 
     @Override
