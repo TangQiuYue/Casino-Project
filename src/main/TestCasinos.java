@@ -38,16 +38,16 @@ public class TestCasinos {
         System.out.println(fredou.toString());
         System.out.println(nicola.toString());
         System.out.println(tooPoorTest.toString());
-        System.out.println("");
+        System.out.println(""); 
         
         //Players are joining the Casino
-        
+        System.out.println("Joining Casino"); 
         System.out.println(audrey.joinCasino(casinoDeMontreal));
         System.out.println(marie.joinCasino(casinoDeMontreal));
         System.out.println(fredou.joinCasino(casinoDeMontreal));
         System.out.println(nicola.joinCasino(casinoDeMontreal));
         System.out.println(tooPoorTest.joinCasino(casinoDeMontreal));
-        System.out.println("\n");
+        System.out.println("");
         
         //Array from players who have joined the Casino
         System.out.println("Array of players having entered the Casino");

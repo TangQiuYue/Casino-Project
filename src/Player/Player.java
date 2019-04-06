@@ -51,18 +51,18 @@ public class Player implements Compare {
         return this.name.equals(others.name);
     }
 
-    public boolean joinCasino(Casino casinoJoin) {
+    public boolean joinCasino(Casino joiningThisCasino) {
 
         if (this.funds == 0) {
             System.out.println("You need money to join");
             return false;
         } else {
-            if (casinoJoin.addPlayer(this) == false) {
-                return false;
-            } else {
-                if (casinoJoin.addPlayer(this) == true);
-                this.casino = casinoJoin;
+            if (joiningThisCasino.addPlayer(this) == true) {
+                this.casino = joiningThisCasino;
                 return true;
+
+            } else {
+                return false;
             }
         }
     }

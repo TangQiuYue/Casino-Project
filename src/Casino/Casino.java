@@ -53,20 +53,20 @@ public class Casino implements Compare {
     }
 
     //Methodes
-    public boolean addPlayer(Player newPlayer) {
+    public boolean addPlayer(Player newPlayerAdd) {
         if (this.currentPlayers > this.maxPlayers) {
             return false;
         }
-        if (newPlayer == null) {
+        if (newPlayerAdd == null) {
             return false;
         }
-        if (newPlayer instanceof PoorPlayer && newPlayer.getFunds() < 10) {
+        if (newPlayerAdd instanceof PoorPlayer && newPlayerAdd.getFunds() < 10) {
             return false;
         }
-        if (newPlayer instanceof RichPlayer && newPlayer.getFunds() < 1000) {
+        if (newPlayerAdd instanceof RichPlayer && newPlayerAdd.getFunds() < 1000) {
             return false;
         } else {
-            this.playerArray[this.currentPlayers] = newPlayer;
+            this.playerArray[this.currentPlayers] = newPlayerAdd;
             this.currentPlayers++;
             return true;
         }
