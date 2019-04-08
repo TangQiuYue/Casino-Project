@@ -30,15 +30,12 @@ public abstract class Games {
     }
 
     //methodes
-    public String toString(String rules) {
-        return " Welcome to " + this.name + " ! " + rules ;
-    }
     
     public abstract int calculateGains(Player player, int bet);
 
     public boolean equals(Games others) {
-        return this.name.equals(others.name);
-    }
+       return this.name.equals(others.name);
+   }
 
     public String getName() {
         return name;

@@ -7,6 +7,8 @@ package main;
 
 import Casino.MainCasino;
 import Casino.SecondaryCasino;
+import Games.DiceGame;
+import Games.HeadsOrTails;
 import Player.PoorPlayer;
 import Player.RichPlayer;
 
@@ -57,11 +59,16 @@ public class TestCasinos {
         casinoDeMontreal.printArray();
         System.out.println("\n");
 
-        //Quit casino test
-        System.out.println("Should say player is not in casino: ");
-        tooPoorToPlay.quitCasino(casinoDeGatineau);
-        System.out.println("Should remove player, returns true: ");
-        System.out.println(phil.quitCasino(casinoDeMontreal));
+        //Creation of Games
+        DiceGame diceGame = new DiceGame();
+        HeadsOrTails headsOrTails = new HeadsOrTails();
+
+        //Betting   
         
+       pat.playTime(diceGame, 5);
+       fredou.playTime(headsOrTails, 5);
+       System.out.println(audrey.playTime(diceGame, 8000));
+       System.out.println(josh.playTime(headsOrTails, 200));
+
     }
 }

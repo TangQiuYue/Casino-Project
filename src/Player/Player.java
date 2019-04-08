@@ -6,10 +6,10 @@
 package Player;
 
 import Casino.Casino;
-import Casino.MainCasino;
+import Games.DiceGame;
+import Games.Games;
+import Games.HeadsOrTails;
 
-/* import Casino.*; would import all of the casinos if 
- there was more than one */
 /**
  *
  * @author Marie-Eve
@@ -20,12 +20,19 @@ public class Player implements Compare {
     private String name;
     private int funds;
     private Casino casino;
+    private Games playGame;
+    private DiceGame diceGame;
+    private HeadsOrTails headsOrTails;
 
     // Constructors 
     public Player(String name, int funds) {
         this.name = name;
         this.funds = funds;
         this.casino = null;
+        this.playGame = null;
+        this.diceGame = new DiceGame();
+        this.headsOrTails = new HeadsOrTails();
+
     }
 
     public Player() {
@@ -68,17 +75,50 @@ public class Player implements Compare {
     }
 
     public boolean quitCasino(Casino leaveCasino) {
-        if(leaveCasino.removePlayer(this) == true){
-        this.casino = null;
-        return true;
-    } else {
+        if (leaveCasino.removePlayer(this) == true) {
+            this.casino = null;
+            return true;
+        } else {
             return false;
+        }
+    }
+
+    public int playTime(Games whichGame, int bid) {
+
+        this.playGame = whichGame;
+        casino.findPlayer(this);
+        if (bid > this.funds) {
+            System.out.println("You cannot bid more than what you have");
+            return funds;
+        } else {
+            if (this.playGame.equals(diceGame)) {
+                if (bid < this.funds) {
+                    System.out.println(whichGame.toString());
+                    this.funds = this.funds - bid;
+                    this.funds = this.funds + casino.playDiceGame(this, bid);
+                    System.out.println("funds after bid are " + this.funds);
+
+                } else if (this.playGame.equals(headsOrTails)) {
+                    if (bid < this.funds) {
+                        System.out.println(whichGame.toString());
+                        this.funds = this.funds - bid;
+                        System.out.println("funds after bid are " + this.funds);
+
+                        this.funds = this.funds + casino.playheadsOrTailsGame(this, bid);
+                        return funds;
+
+                    }
+                }
+            }
+            return funds;
         }
     }
 
     public int headsOrTails(int bid) {
         casino.findPlayer(this);
+
         if (bid < this.funds) {
+            headsOrTails.toString();
             this.funds = this.funds - bid;
             System.out.println("funds after bid are " + this.funds);
 
@@ -91,10 +131,9 @@ public class Player implements Compare {
     }
 
     public int diceGame(int bid) {
-        if (this.casino instanceof MainCasino) {
-            casino.findPlayer(this);
-        }
+        casino.findPlayer(this);
         if (bid < this.funds) {
+            diceGame.toString();
             this.funds = this.funds - bid;
             System.out.println("funds after bid are " + this.funds);
             this.funds = this.funds + casino.playDiceGame(this, bid);

@@ -5,7 +5,7 @@
             <url>src/main/TestCasinos.java</url>
             <bookmark id="1">
                 <name/>
-                <line>63</line>
+                <line>59</line>
                 <key/>
             </bookmark>
         </file>
@@ -13,11 +13,14 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Marie-Eve/Documents/NetBeansProjects/Casino_Java_class_project_01_2019/Casino%20Project/src/Casino/MainCasino.java</file>
+            <file>file:/C:/Users/Marie-Eve/Documents/NetBeansProjects/Casino_Java_class_project_01_2019/Casino%20Project/src/Games/HeadsOrTails.java</file>
+            <file>file:/C:/Users/Marie-Eve/Documents/NetBeansProjects/Casino_Java_class_project_01_2019/Casino%20Project/src/Games/DiceGame.java</file>
             <file>file:/C:/Users/Marie-Eve/Documents/NetBeansProjects/Casino_Java_class_project_01_2019/Casino%20Project/src/Casino/SecondaryCasino.java</file>
             <file>file:/C:/Users/Marie-Eve/Documents/NetBeansProjects/Casino_Java_class_project_01_2019/Casino%20Project/src/Player/Player.java</file>
             <file>file:/C:/Users/Marie-Eve/Documents/NetBeansProjects/Casino_Java_class_project_01_2019/Casino%20Project/src/Player/RichPlayer.java</file>
             <file>file:/C:/Users/Marie-Eve/Documents/NetBeansProjects/Casino_Java_class_project_01_2019/Casino%20Project/src/main/TestCasinos.java</file>
             <file>file:/C:/Users/Marie-Eve/Documents/NetBeansProjects/Casino_Java_class_project_01_2019/Casino%20Project/src/main/TestedCode.java</file>
+            <file>file:/C:/Users/Marie-Eve/Documents/NetBeansProjects/Casino_Java_class_project_01_2019/Casino%20Project/src/Games/Games.java</file>
             <file>file:/C:/Users/Marie-Eve/Documents/NetBeansProjects/Casino_Java_class_project_01_2019/Casino%20Project/src/Casino/Casino.java</file>
         </group>
     </open-files>

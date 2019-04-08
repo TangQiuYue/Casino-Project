@@ -26,11 +26,11 @@ public class HeadsOrTails extends Games {
     }
     
     //Methodes
-    
-    public String Rules(){
+    @Override
+    public String toString(){
         return "The rules are simple: every game a coin "
                 + "will be tossed.\n If the coin lands on heads, you get double your "
-                + "bet!\n If it lands on tails, you loose your bet. Enjoy!";
+                + "bet!\n If it lands on tails, you loose your bet. Enjoy! \n";
     }
  
     @Override
