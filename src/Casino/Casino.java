@@ -130,11 +130,13 @@ public class Casino implements Compare {
             System.out.println("Time goes by and I never forget\n"
                     + "And I think of you\n"
                     + "Friends would say I may always regret\n"
-                    + "When I think of you");
+                    + "When I think of you \n");
+            return result + bid;
         } else {
             result = this.headsOrTails.calculateGains(player, bid);
+            return result;
         }
-        return result;
+        
     }
 
     public int playDiceGame(Player player, int bid) {
@@ -143,12 +145,13 @@ public class Casino implements Compare {
             System.out.println("Time goes by and I never forget\n"
                     + "And I think of you\n"
                     + "Friends would say I may always regret\n"
-                    + "When I think of you");
+                    + "When I think of you \n");
+            return result + bid;
         } else {
             result = this.diceGame.calculateGains(player, bid);
-
+            return result;
         }
-        return result;
+        
     }
 
     @Override

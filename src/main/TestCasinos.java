@@ -23,6 +23,10 @@ public class TestCasinos {
         //Creation of Casinos
         MainCasino casinoDeMontreal = new MainCasino("Casino de Montreal", 10);
         SecondaryCasino casinoDeGatineau = new SecondaryCasino("Casino de Gatineau", 10);
+        
+        //Creation of Games
+        DiceGame diceGame = new DiceGame();
+        HeadsOrTails headsOrTails = new HeadsOrTails();
 
         //Creation of rich players
         RichPlayer audrey = new RichPlayer("Audrey", 5000);
@@ -58,17 +62,16 @@ public class TestCasinos {
         System.out.println("Array of players having entered the Casino");
         casinoDeMontreal.printArray();
         System.out.println("\n");
-
-        //Creation of Games
-        DiceGame diceGame = new DiceGame();
-        HeadsOrTails headsOrTails = new HeadsOrTails();
-
-        //Betting   
         
-       pat.playTime(diceGame, 5);
-       fredou.playTime(headsOrTails, 5);
-       System.out.println(audrey.playTime(diceGame, 8000));
-       System.out.println(josh.playTime(headsOrTails, 200));
+        //Betting with/without Gregory Charle show
+        
+        casinoDeMontreal.gregoryStartShow();
+        System.out.println(audrey.playTime(headsOrTails, 50));
+        System.out.println(josh.playTime(diceGame, 5));
+        
+        casinoDeMontreal.gregoryEndShow();
+        System.out.println(audrey.playTime(headsOrTails, 50));
+        System.out.println(josh.playTime(diceGame, 5));
 
     }
 }

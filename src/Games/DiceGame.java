@@ -31,7 +31,7 @@ public class DiceGame extends Games {
         return "Welcome to Dice Games! Rules are simple: Roll the dice, if you \n"
                 + " get a combined total of 7 you double your bid, \n"
                 + "if you get a 6 or an 8, we call it ties \n"
-                + "but if you get anything else, we keep your money! \n \n";
+                + "but if you get anything else, we keep your money! \n";
     }
     
     @Override

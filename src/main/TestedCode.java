@@ -148,43 +148,34 @@ public class TestedCode {
         System.out.println(oneTooMany.toString());
         System.out.println("");
         
-        // Play Dice and HeadsOrTails game before Gregory Charles show
-        audrey.diceGame(20);
-        josh.headsOrTails(5);
-        System.out.println("\n");
-
-        //Add Gregory Show
-        casinoDeMontreal.gregoryStartShow();
-
-        // Play Dice and HeadsOrTails game during Gregory Charles show
-        audrey.diceGame(20);
-        josh.headsOrTails(5);
-        System.out.println("\n");
-        
-        //End the Gregory Charle Show
-        casinoDeMontreal.gregoryEndShow();
-
-        // Play Dice and HeadsOrTails game after Gregory Charles show
-        audrey.diceGame(20);
-        josh.headsOrTails(5);
-        System.out.println("\n");
-        
-       //Betting   
-        
-        pat.diceGame(5);
-        fredou.headsOrTails(5);
-        
-       //Betting more than they have
-        System.out.println("pat");
-        pat.diceGame(1000);
-        System.out.println("fredou");
-        fredou.headsOrTails(3500);
-        
         //Quit casino test
         System.out.println("Should say player is not in casino: ");
         tooPoorToPlay.quitCasino(casinoDeGatineau);
         System.out.println("Should remove player, returns true: ");
         System.out.println(phil.quitCasino(casinoDeMontreal));
+        
+        //Creation of Games
+        DiceGame diceGame = new DiceGame();
+        HeadsOrTails headsOrTails = new HeadsOrTails();
+
+        //Betting   
+        
+       pat.playTime(diceGame, 5);
+       fredou.playTime(headsOrTails, 5);
+       System.out.println(audrey.playTime(diceGame, 8000));
+       System.out.println(josh.playTime(headsOrTails, 200));
+               // compareto
+        RichPlayer audrey2 = new RichPlayer("Audrey", 5000);
+        RichPlayer audrey3 = new RichPlayer("Audrey", 1500);
+        audrey2.joinCasino(casinoDeGatineau);
+        audrey3.joinCasino(casinoDeGatineau);
+        
+        System.out.println(audrey.compareTo(pat));
+        System.out.println(josh.compareTo(josh));
+        System.out.println(audrey.compareTo(audrey2));
+        System.out.println(audrey.compareTo(audrey3));
+
+        
         
         */
         

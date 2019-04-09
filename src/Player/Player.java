@@ -92,56 +92,23 @@ public class Player implements Compare {
             return funds;
         } else {
             if (this.playGame.equals(diceGame)) {
-                if (bid < this.funds) {
-                    System.out.println(whichGame.toString());
-                    this.funds = this.funds - bid;
-                    this.funds = this.funds + casino.playDiceGame(this, bid);
-                    System.out.println("funds after bid are " + this.funds);
+                System.out.println(whichGame.toString());
+                this.funds = this.funds - bid;
+                this.funds = this.funds + casino.playDiceGame(this, bid);
+                System.out.println("funds after bid are " + this.funds);
 
-                } else if (this.playGame.equals(headsOrTails)) {
-                    if (bid < this.funds) {
-                        System.out.println(whichGame.toString());
-                        this.funds = this.funds - bid;
-                        System.out.println("funds after bid are " + this.funds);
+            } else 
+                if (this.playGame.equals(headsOrTails)) {
+                System.out.println(whichGame.toString());
+                this.funds = this.funds - bid;
+                System.out.println("funds after bid are " + this.funds);
 
-                        this.funds = this.funds + casino.playheadsOrTailsGame(this, bid);
-                        return funds;
+                this.funds = this.funds + casino.playheadsOrTailsGame(this, bid);
+                return funds;
 
-                    }
-                }
             }
-            return funds;
         }
-    }
-
-    public int headsOrTails(int bid) {
-        casino.findPlayer(this);
-
-        if (bid < this.funds) {
-            headsOrTails.toString();
-            this.funds = this.funds - bid;
-            System.out.println("funds after bid are " + this.funds);
-
-            this.funds = this.funds + casino.playheadsOrTailsGame(this, bid);
-            return funds;
-        } else {
-            System.out.println("You cannot bid more than what you have");
-            return funds;
-        }
-    }
-
-    public int diceGame(int bid) {
-        casino.findPlayer(this);
-        if (bid < this.funds) {
-            diceGame.toString();
-            this.funds = this.funds - bid;
-            System.out.println("funds after bid are " + this.funds);
-            this.funds = this.funds + casino.playDiceGame(this, bid);
-            return funds;
-        } else {
-            System.out.println("You cannot bid more than what you have");
-            return funds;
-        }
+        return funds;
     }
 
     @Override
