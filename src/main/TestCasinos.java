@@ -78,8 +78,15 @@ public class TestCasinos {
         casinoDeGatineau.printArray();
         System.out.println("\n");
         
-
+        //Rich player method Bankrupt 
         
+        audrey.BankRupt();
+        System.out.println(casinoDeMontreal.findPlayer(audrey));
+        casinoDeMontreal.printArray();
+        //Poor player method payDay
+        
+        crystal.PayDayTest("01012019");
+        System.out.println(crystal.getFunds());
         
         
         

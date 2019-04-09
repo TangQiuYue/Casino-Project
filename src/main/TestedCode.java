@@ -207,6 +207,11 @@ public class TestedCode {
         
         System.out.println("Array of players after fireAlarm");
         casinoDeGatineau.printArray();
+        
+                //Secondary Casino Method
+            //SortAndBoot
+        
+        casinoDeGatineau.sortAndBoot(casinoDeGatineau.getPlayerArray(), 0, casinoDeGatineau.getCurrentPlayers() -1, 2);
         */
         
 
