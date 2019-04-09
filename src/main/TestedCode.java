@@ -23,8 +23,11 @@ public class TestedCode {
         MainCasino casinoDeMontreal = new MainCasino("Casino de Montreal", 10);
         SecondaryCasino casinoDeGatineau = new SecondaryCasino("Casino de Gatineau", 10);
         
+                //Creation of Games
+        DiceGame diceGame = new DiceGame();
+        HeadsOrTails headsOrTails = new HeadsOrTails();
         
-        //Creation of rich players
+                //Creation of rich players
         
         RichPlayer audrey = new RichPlayer("Audrey", 5000);
         RichPlayer marie = new RichPlayer("Marie", 5000);
@@ -32,7 +35,7 @@ public class TestedCode {
         RichPlayer nicola = new RichPlayer("Nicola", 1500);
         RichPlayer tooPoorTest = new RichPlayer("poorTest", 10);
         
-        //Creation of poor players
+                //Creation of poor players
         
         PoorPlayer emily = new PoorPlayer("Emily", 50);
         PoorPlayer pat = new PoorPlayer("Pat", 25);
@@ -43,7 +46,8 @@ public class TestedCode {
         PoorPlayer phil = new PoorPlayer("Phil", 85);
         PoorPlayer oneTooMany = new PoorPlayer("One Too Many", 200);
         
-        //toString Rich Players Before entering the casino 
+                 //Player method
+            //toString Rich Players Before entering the casino 
         System.out.println("Rich players toString before joining casino");
         System.out.println(audrey.toString());
         System.out.println(marie.toString());
@@ -52,7 +56,8 @@ public class TestedCode {
         System.out.println(tooPoorTest.toString());
         System.out.println(""); 
         
-        //toString Poor Players before entering the Casino
+                //Player method
+                //toString Poor Players before entering the Casino
         System.out.println("Poor players toString before joining casino");
         System.out.println(emily.toString());
         System.out.println(pat.toString());
@@ -64,7 +69,8 @@ public class TestedCode {
         System.out.println(oneTooMany.toString());
         System.out.println("");
         
-        //Players are joining the Casino
+            //Player method
+                //Players are joining the Casino
         System.out.println("Joining Casino"); 
         System.out.println(audrey.joinCasino(casinoDeMontreal));
         System.out.println(marie.joinCasino(casinoDeMontreal));
@@ -81,12 +87,14 @@ public class TestedCode {
         System.out.println("Casino is full, should be false: " + oneTooMany.joinCasino(casinoDeMontreal));
         System.out.println("");
         
-        //Array from players who have joined the Casino
+            //Casino Method
+                //Array from players who have joined the Casino
         System.out.println("Array of players having entered the Casino");
         casinoDeMontreal.printArray();
         System.out.println("\n");
         
-        //Rich Player toString After entering the Casino
+          //Player Method
+                //Rich Player toString After entering the Casino
         System.out.println("Rich Player To String after entering Casino");
         System.out.println(audrey.toString());
         System.out.println(marie.toString());
@@ -95,7 +103,8 @@ public class TestedCode {
         System.out.println(tooPoorTest.toString());
         System.out.println("");
         
-        //toString Poor Players after entering the Casino
+            //Player Method
+                //toString Poor Players after entering the Casino
         System.out.println("Poor players toString after trying to join casino");
         System.out.println(emily.toString());
         System.out.println(pat.toString());
@@ -107,6 +116,7 @@ public class TestedCode {
         System.out.println(oneTooMany.toString());
         System.out.println("");
         
+                //Main Casino Method
         //Rich Player toString before tax collections
         System.out.println("Rich Player To String before tax collections");
         System.out.println(audrey.toString());
@@ -115,7 +125,8 @@ public class TestedCode {
         System.out.println(nicola.toString());
         System.out.println("");
         
-        //toString Poor Players before tax collections
+            //Main Casino Method
+                //toString Poor Players before tax collections
         System.out.println("Poor players toString before tax collections");
         System.out.println(emily.toString());
         System.out.println(pat.toString());
@@ -127,7 +138,8 @@ public class TestedCode {
         
         casinoDeMontreal.collectTaxes();
         
-        //Rich Player toString after tax collections
+           //Main Casino Method
+                //Rich Player toString after tax collections
         System.out.println("Rich Player To String after tax collections");
         System.out.println(audrey.toString());
         System.out.println(marie.toString());
@@ -136,7 +148,8 @@ public class TestedCode {
         System.out.println(tooPoorTest.toString());
         System.out.println("");
         
-        //toString Poor Players after tax collections
+            //Main Casino Method
+               //toString Poor Players after tax collections
         System.out.println("Poor players toString after tax collections");
         System.out.println(emily.toString());
         System.out.println(pat.toString());
@@ -148,23 +161,23 @@ public class TestedCode {
         System.out.println(oneTooMany.toString());
         System.out.println("");
         
-        //Quit casino test
+            //Player method
+                //Quit casino test
         System.out.println("Should say player is not in casino: ");
         tooPoorToPlay.quitCasino(casinoDeGatineau);
         System.out.println("Should remove player, returns true: ");
         System.out.println(phil.quitCasino(casinoDeMontreal));
-        
-        //Creation of Games
-        DiceGame diceGame = new DiceGame();
-        HeadsOrTails headsOrTails = new HeadsOrTails();
 
-        //Betting   
+            // Player Method
+                //Betting   
         
        pat.playTime(diceGame, 5);
        fredou.playTime(headsOrTails, 5);
        System.out.println(audrey.playTime(diceGame, 8000));
        System.out.println(josh.playTime(headsOrTails, 200));
-               // compareto
+              
+        //Player method
+                // compareto
         RichPlayer audrey2 = new RichPlayer("Audrey", 5000);
         RichPlayer audrey3 = new RichPlayer("Audrey", 1500);
         audrey2.joinCasino(casinoDeGatineau);
@@ -175,8 +188,25 @@ public class TestedCode {
         System.out.println(audrey.compareTo(audrey2));
         System.out.println(audrey.compareTo(audrey3));
 
+                //Main Casino method
+            //Betting with/without Gregory Charle show
         
+        casinoDeMontreal.gregoryStartShow();
+        System.out.println(audrey.playTime(headsOrTails, 50));
+        System.out.println(josh.playTime(diceGame, 5));
         
+        casinoDeMontreal.gregoryEndShow();
+        System.out.println(audrey.playTime(headsOrTails, 50));
+        System.out.println(josh.playTime(diceGame, 5));
+        
+            //Secondary Casino Method
+                //fireAlarm
+        System.out.println("Array of players having entered the Casino");
+        casinoDeGatineau.printArray();
+        casinoDeGatineau.fireAlarm();
+        
+        System.out.println("Array of players after fireAlarm");
+        casinoDeGatineau.printArray();
         */
         
 

@@ -27,7 +27,7 @@ public class SecondaryCasino extends Casino {
 
     //methodes
     public void fireAlarm() {
-        int arraySize = this.getCurrentPlayers() -1;
+        int arraySize = this.getCurrentPlayers();
         Player[] playerArray = this.getPlayerArray();
         for (int i = 0; i < arraySize; i++) {
             this.removePlayer(playerArray[0]);
