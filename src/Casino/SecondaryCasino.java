@@ -97,7 +97,7 @@ public class SecondaryCasino extends Casino {
         System.out.println("your sorted player array \n");
         printArray();
         int temp = this.getCurrentPlayers() - 1;
-        for (int i = temp; i > temp - bootHowMany; i--) {
+        for (int i = temp; i >= temp - bootHowMany; i--) {
             this.removePlayer(arrayOfPlayers[i]);
         }
         System.out.println("your new player array \n");

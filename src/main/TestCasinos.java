@@ -78,10 +78,7 @@ public class TestCasinos {
         casinoDeGatineau.printArray();
         System.out.println("\n");
         
-        //Secondary Casino Method
 
-        
-        casinoDeGatineau.sortAndBoot(casinoDeGatineau.getPlayerArray(), 1, 10, 2);
         
         
         
